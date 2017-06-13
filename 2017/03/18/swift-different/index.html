@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="zh-cn,en,default"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Swift与OC的差异 · winter</title><meta name="description" content="Swift与OC的差异 - 廖文韬"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/prontera.css"><link rel="search" type="application/opensearchdescription+xml" href="https://winterliao.github.io/atom.xml" title="winter"></head><body><header class="feature-header"><nav class="component-nav"><ul><div class="logo-container"><a href="/"><h2 class="title">winter</h2></a></div><a href="/" target="_self" class="li component-nav-item"><p>主页</p></a><a href="/archives" target="_self" class="li component-nav-item"><p>归档</p></a><ul class="shortcut-icons"><a href="https://github.com/winterLiao" target="_blank"><img src="/images/github.svg" class="icon"></a></ul></ul></nav></header><main class="container"><div id="post-container"><div class="post"><article class="post-block"><h1 class="post-title">Swift与OC的差异</h1><div class="post-info">2017年3月18日</div><div class="post-content"><p>在Swift刚出来时就学习过，之后也一直没有用Swift写过项目，很快就忘记了，最近又花了点时间过了一遍官方的学习文档。<br><a href="http://blog.csdn.net/IT_201607/article/category/6709557">学习笔记</a></p>
+<h2 id="Swift与OC的差异"><a href="#Swift与OC的差异" class="headerlink" title="Swift与OC的差异"></a>Swift与OC的差异</h2><h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ul>
+<li>声明使用let和var关键字，Swift可以推出出类型,let声明的常量不可修改，var声明变量。</li>
+<li>Swift对数据要求严格，不存在隐式转换，强制转换格式：int(a)</li>
+<li>使用整数类型的 min 和 max 属性来获取对应类型的最小值和最大值</li>
+<li>BOOL类型只有true和false，不再是非0即真，Swift的赋值运算符没有返回值</li>
+<li>Swift增加了元组类型。元组把多个值组合成一个复合值，元组内的值可以使任意类型，并不要求是相同类型。元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。</li>
+<li>Swift增加了可选类型，用于处理值缺失的情况。可选类型表示：有值或无值。swift定义的常量和变量是没有默认值的，所以引入了可选的概念，用?修饰变量，标示该变量的值可能为空也可能为某个值，然后获取的时候用!强制解析，此时必须有值，否则报运行时错误。涉及到可选绑定、强制解析和隐式解析等内容。</li>
+<li>Swift范围运算符：闭区间运算符（a…b），半开区间运算符（a..&lt;b）</li>
+<li>结构体也可以定义方法，和类非常相似</li>
+<li>Swift新增泛型的使用，使用占位类型名来代替实际类型名<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3></li>
+<li>使用<code>+</code>链接字符串</li>
+<li>字符串/字符可以用等于操作符(==)和不等于操作符(!=)进行比较</li>
+<li>使用下标，下标可以定义在类、结构体和枚举中，是访问集合，列表或序列中元素的快捷方式。<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3></li>
+<li>Switch语句： Swift 中，可匹配各种类型，当匹配的 case分支中的代码执行完毕后，程序会终止switch语句，而不会继续执行下一个 case分支。不用像OC一样使用break跳出。还可以使用where语句进行条件判断</li>
+<li>循环语句中必须加{} ，即使只有一行代码<h3 id="函数闭包"><a href="#函数闭包" class="headerlink" title="函数闭包"></a>函数闭包</h3></li>
+<li>函数格式 <code>func Sum (num1:Int,num2:Int)</code> –&gt;Int{}，与oc一样函数具有有参数、无参数、有返回值、无返回值等多种类型，也可作为参数或返回值。</li>
+<li>Swift特有的闭包表达式，<code>{ (parameters) -&gt; returnType in
+  statements
+}</code><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3></li>
+<li>新增计算属性，计算属性不直接存储值，而是提供一个 getter 和一个可选的setter，来间接获取和设置其他属性或变量的值。</li>
+<li>属性观察器，willSet 在新的值被设置之前调用<br>didSet 在新的值被设置之后立即调用<br>willSet 观察器会将新的属性值作为常量参数传入，在 willSet 的实现代码中可以为这个参数指定一个名称，如果不指定则参数仍然可用，这时使用默认名称 newValue 表示。<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>当然还有很多的差异没有列出来，这里只是简单的归纳了一部分常遇到的。</li>
+<li>Swift只有一个.swift的文件，没有OC的.h和.m文件，不再需要引入头文件来声明。</li>
+<li>每条语句不需要使用<code>；</code>结尾,除非是一行中包含多条语句。</li>
+<li>Swift支持多行嵌套注释，注释嵌套<code>/*/**/*/</code></li>
+</ul>
+<h2 id="Swift封装的控件"><a href="#Swift封装的控件" class="headerlink" title="Swift封装的控件"></a>Swift封装的控件</h2><p>浏览完文档，随意封装了些控件<br><a href="https://github.com/winterLiao/LWTSegementController">类新闻客户端</a><br><a href="https://github.com/winterLiao/GifLoadView">动画加载gif图</a><br><a href="https://github.com/winterLiao/WTDatePickerView">日期选择器</a>  </p>
+</div></article></div><div id="disqus_thread"></div></div><script>var disqus_shortname = 'Winter';
+var disqus_identifier = '2017/03/18/swift-different/';
+var disqus_title = 'Swift与OC的差异';
+var disqus_url = 'https://winterliao.github.io/2017/03/18/swift-different/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//Winter.disqus.com/count.js" async></script></main><footer class="footer-container"><div class="paginator"><a href="/2017/03/13/frameWork/" class="next">下一篇</a></div><div class="copyright"><p>© 2017 <a href="https://winterliao.github.io">廖文韬</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/AngryPowman/hexo-theme-prontera" target="_blank">hexo-theme-prontera</a>.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"Winter",'auto');ga('send','pageview');</script></body></html>
