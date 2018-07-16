@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://winterliao.github.io/"/>
-  <updated>2017-07-04T09:20:52.000Z</updated>
+  <updated>2018-07-16T09:04:54.804Z</updated>
   <id>https://winterliao.github.io/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>attrubuteTextAction</title>
+    <title>MGJRouterDemo</title>
+    <link href="https://winterliao.github.io/2018/02/16/MGJRouterDemo/"/>
+    <id>https://winterliao.github.io/2018/02/16/MGJRouterDemo/</id>
+    <published>2018-02-16T09:03:54.000Z</published>
+    <updated>2018-07-16T09:04:54.804Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最开始想做路由，是因为当时app中有大量与H5之间的交互，原生和H5的跳转操作比较多比较频繁，新增一个跳转又涉及到改代码发版本,为了统一iOS、安卓和H5的跳转，引入了路由。    </p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>后来发现路由，可解决的问题远远不止这个，<br>Router就像是个调度中心，各个模块通过路由调度其他模块，模块之间不需要相互引用，调度方式更加统一，更加自由，能够实现解耦的作用，同时也为之后的组件化开发提供了基础。<br><img src="http://ok841h9gr.bkt.clouddn.com/router.png" alt=""></p>
+<h3 id="路由选择"><a href="#路由选择" class="headerlink" title="路由选择"></a>路由选择</h3><p>目前github优秀的路由设计已经有很多，如JLRoutes，MGJRouter，CTMediator。<br>JLRoutes提供的功能比较复杂，有很多我个人用不上的功能，所以没有选择。<br>CTMediator更适合业务比较复杂的情况，MGJRouter的使用上更加容易上手，功能也比较简单，更加适用于页面跳转这种业务比较多的场景。所以我项目中选择了MGJRouter</p>
+<h3 id="MGJRouter"><a href="#MGJRouter" class="headerlink" title="MGJRouter"></a>MGJRouter</h3><p>MGJRouter就一个单例类，使用前需要通过注册组件，调用方通过URL调用服务方页面，通过路由表的映射关系进行关联，调用方可以传入复 杂的参数、对象等。<br>基本跳转主要是注册组件，调用openURl方法，传入参数即可实现。<br><figure class="highlight clojure"><table><tr><td class="code"><pre><div class="line">[MGJRouter registerURLPattern:@<span class="string">"mgj://foo/bar"</span> toHandler:^(<span class="name">NSDictionary</span> *routerParameters) &#123;</div><div class="line">NSLog(@<span class="string">"routerParameterUserInfo:%@"</span>, routerParameters[MGJRouterParameterUserInfo])<span class="comment">;</span></div><div class="line">&#125;]<span class="comment">;</span></div><div class="line"></div><div class="line">[MGJRouter openURL:@<span class="string">"mgj://foo/bar"</span>]<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>使用一个类来统一管理注册的方法，再load方法中进行注册，就不会到处看到注册的代码，方便管理。<br><img src="http://ok841h9gr.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-16%20%E4%B8%8B%E5%8D%884.53.36.png" alt=""></p>
+<p>很多人说没有反向传值的方法，其实和我们其他跳转一样，传参数的时候使用block即可解决。<br><figure class="highlight clojure"><table><tr><td class="code"><pre><div class="line">[MGJRouter openURL:@<span class="string">"LWT://Test3/PushMainVC"</span></div><div class="line">withUserInfo:@&#123;@<span class="string">"navigationVC"</span> : self.navigationController,</div><div class="line">@<span class="string">"block"</span>:^(<span class="name">NSString</span> * text)&#123;</div><div class="line">NSLog(@<span class="string">"%@"</span>,text)<span class="comment">;</span></div><div class="line">&#125;,</div><div class="line">&#125;</div><div class="line">completion:nil]<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<h3 id="代码下载"><a href="#代码下载" class="headerlink" title="代码下载"></a>代码下载</h3><p>demo中有MGJRouter各个方法的使用案例,包括跳转，获取组件，正反向传参。<br><a href="https://github.com/winterLiao/RouterDemo">MGJRouter使用Demo</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;最开始想做路由，是因为当时app中有大量与H5之间的交互，原生和H5的跳转操作比较多比较频繁，新增一个跳转又涉及到改代码发版本,为了统一iO
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AttrubuteTextAction</title>
     <link href="https://winterliao.github.io/2017/07/04/attrubuteTextAction/"/>
     <id>https://winterliao.github.io/2017/07/04/attrubuteTextAction/</id>
     <published>2017-07-04T08:37:41.000Z</published>
-    <updated>2017-07-04T09:20:52.000Z</updated>
+    <updated>2017-07-04T09:32:55.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://ok841h9gr.bkt.clouddn.com/%E5%9B%BE%E6%96%87%E6%B7%B7%E6%8E%92.gif" alt=""></p>
 <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>字符串中某段区域需要添加点击效果或者字符串中添加可点击的按钮。<br>解决：给UILabel添加点击事件的category。</p>
