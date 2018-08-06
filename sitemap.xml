@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://winterliao.github.io/2018/08/06/AVPlayer%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-08-06T10:26:59.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://winterliao.github.io/2018/08/06/Swift%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
+    
+    <lastmod>2018-08-06T10:26:13.175Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://winterliao.github.io/2018/02/16/MGJRouterDemo/</loc>
     
     <lastmod>2018-07-16T09:04:54.804Z</lastmod>
@@ -44,6 +58,27 @@
   </url>
   
   <url>
+    <loc>https://winterliao.github.io/video/index.html</loc>
+    
+    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://winterliao.github.io/help/index.html</loc>
+    
+    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://winterliao.github.io/links/index.html</loc>
+    
+    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://winterliao.github.io/about/index.html</loc>
     
     <lastmod>2017-04-23T18:14:28.000Z</lastmod>
@@ -51,7 +86,7 @@
   </url>
   
   <url>
-    <loc>https://winterliao.github.io/app/index.html</loc>
+    <loc>https://winterliao.github.io/rss/index.html</loc>
     
     <lastmod>2017-04-23T18:14:28.000Z</lastmod>
     
@@ -72,28 +107,7 @@
   </url>
   
   <url>
-    <loc>https://winterliao.github.io/video/index.html</loc>
-    
-    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://winterliao.github.io/links/index.html</loc>
-    
-    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://winterliao.github.io/rss/index.html</loc>
-    
-    <lastmod>2017-04-23T18:14:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://winterliao.github.io/help/index.html</loc>
+    <loc>https://winterliao.github.io/app/index.html</loc>
     
     <lastmod>2017-04-23T18:14:28.000Z</lastmod>
     
